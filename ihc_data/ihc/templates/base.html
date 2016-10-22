@@ -1,0 +1,45 @@
+<!doctype html>
+<head>
+  {% load staticfiles %}
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <!-- Django-Materialize -->
+  {% include 'material/includes/material_css.html' %}
+  <script src="{% static 'material/js/jquery-2.2.0.js' %}"></script>
+  {% include 'material/includes/material_js.html' %}
+
+  <!-- Local JS -->
+  <script src="{% static 'js/main_js.js' %}"></script>
+
+  <!-- Materialize CSS -->
+  <!-- Compiled and minified CSS -->
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css"> -->
+  <!-- Compiled and minified JavaScript -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script> -->
+</head>
+<body>
+  {% block header %}
+    <header class="col s12">
+      <nav>
+        <div class="nav-wrapper">
+          <a href="#!" class="brand-logo">IHC Projects</a>
+          <a href="#" data-activates="small-screen" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboards</a></li>
+            <li><a href="#">Add Project</a></li>
+          </ul>
+          <ul class="side-nav" id="small-screen">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Dashboards</a></li>
+            <li><a href="#">Add Project</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  {% endblock %}
+
+  {% block content %}
+  {% endblock %}
+</body>
+</html>
