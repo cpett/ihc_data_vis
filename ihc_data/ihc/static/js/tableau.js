@@ -13,7 +13,7 @@ $(document).ready(function(){
 
   function initViz(){
        var placeholderDiv = document.getElementById("tableauViz");
-       var url = "https://public.tableau.com/views/IHC_prcnt_savings/ProjectswithCostSavings?:embed=y&:display_count=yes";
+       var url = "https://public.tableau.com/views/Savings_2/ProjectswithCostSavings?:embed=y&:display_count=yes";
        var options = {
             hideTabs: true,
             hideToolbar: true,

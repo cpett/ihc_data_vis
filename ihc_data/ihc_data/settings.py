@@ -87,17 +87,17 @@ DATABASES = {
         # pip install django-pyodbc-azure
         'ENGINE': "sql_server.pyodbc",
         # Server
-        'HOST': "test-ihc.database.windows.net,1433",
+        'HOST': "hcidataserver.database.windows.net,1433",
         # Uid
-        'USER': "cpett",
+        'USER': "teamofallteams",
         # Password
-        'PASSWORD': "Proastelor22",
+        'PASSWORD': "CodyJamesMorgan415",
         # Database
-        'NAME': "sIHC",
+        'NAME': "HCI_Data",
         'OPTIONS': {
             'host_is_server': True,
             # Driver
-            'driver': 'ODBC Driver 13 for SQL Server',
+            # 'driver': 'ODBC Driver 13 for SQL Server',
         },
    }
 }
