@@ -35,11 +35,13 @@
           <ul class="right hide-on-med-and-down">
             <li class="{% block class_tab_home %}{% endblock %}"><a class="active" href="{% url 'index' %}">Home</a></li>
             <li class="{% block class_tab_dashboards %}{% endblock %}"><a href="{% url 'dashboard' %}">Dashboards</a></li>
+            <li class="{% block class_tab_pm %}{% endblock %}"><a href="{% url 'project_management' %}">Project Management</a></li>
             <li class="{% block class_tab_project %}{% endblock %}"><a href="#">Add Project</a></li>
           </ul>
           <ul class="white_text side-nav blue" id="small-screen">
             <li><a href="{% url 'index' %}">Home</a></li>
             <li><a href="{% url 'dashboard' %}">Dashboards</a></li>
+            <li><a href="{% url 'project_management' %}">Project Management</a></li>
             <li><a href="#">Add Project</a></li>
           </ul>
         </div>

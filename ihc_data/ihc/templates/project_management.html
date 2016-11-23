@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load material_form %}
+{% block class_pm %}active{% endblock %}
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col m12">
+      <div class="card">
+        <div class="card-content">
+          <span class="card-title">Project Management</span>
+          <form method="POST" class="viewform">{% csrf_token %}
+              {% form %}
+              {% endform %}
+              <button type="submit" name="_submit" class="btn btn-primary btn-lg blue">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
