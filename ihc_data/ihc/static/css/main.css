@@ -5,3 +5,20 @@ body {
 .white_text a {
   color: #FFFFFF !important;
 }
+
+.white_text {
+  color: #FFFFFF !important;
+  font-size: 1.25em !important;
+}
+
+#Container .mix{
+	display: none;
+}
+
+.p_top {
+  padding-top: 1em !important;
+}
+
+#button.active {
+  background-color: #ef9a9a !important;
+}

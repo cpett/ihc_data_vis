@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load material_form %}
+{% load staticfiles %}
+{% block extrastatic %}
+  <script src="{% static 'js/tableau.js' %}"></script>
+{% endblock %}
+{% block class_tab_dashboards %}active{% endblock %}
+{% block content %}
+<div class="container" onload="initViz();">
+  <div class="card">
+    <div class="row col s12 m12 l12">
+      <div id="tableauViz" class="col s12 m12 l12">
+        <script>
+          var chart = "/{{ viz }}";
+        </script>
+      </div>
+      <div class="col s12 m12 l2" id="dataTarget">
+      </div>
+    </div>
+  </div>
+  <br/>
+  <button id="resetViz" class="col waves-effect waves-light btn red lighten-1">Reset Viz</button>
+  <div class="card">
+    <div class="row">
+      <!-- <div class="col" id="dataTarget">
+      </div> -->
+    </div>
+  </div>
+  <div class="row">
+    <div class="col m4">
+      <div class="card">
+        <a href="{% url 'vizes' 'Projects' %}">
+          <!-- https://public.tableau.com/views/IHC/Projects?:embed=y&:display_count=yes -->
+          <div class="card-content">
+            <span class="card-title">Projects</span>
+            <img src="{% static 'img/projects.png' %}" alt="" class="responsive-img">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <a href="{% url 'vizes' 'Savings' %}">
+          <!-- https://public.tableau.com/views/IHC/Savings?:embed=y&:display_count=yes -->
+          <div class="card-content">
+            <span class="card-title">Savings</span>
+            <img src="{% static 'img/savings.png' %}" alt="" class="responsive-img">
+          </div>
+        </a>
+      </div>
+    </div>
+    <div class="col m4">
+      <div class="card">
+        <a href="{% url 'vizes' 'ProjectswithCostSaving' %}">
+          <!-- https://public.tableau.com/views/IHC/ProjectswithCostSaving?:embed=y&:display_count=yes -->
+          <div class="card-content">
+            <span class="card-title">Projects with Savings</span>
+            <img src="{% static 'img/project_savings.png' %}" alt="" class="responsive-img">
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
